@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>URL Parameter Extraction</title>
+</head>
+<body>
+  <script>
+    var url = new URL(window.location.href);
+
+    // Extract the value of the "parameter" from the URL
+    var parameterValue = url.searchParams.get("parameter");
+
+    // Output the value to the console
+    console.log(parameterValue);
+  </script>
+</body>
+</html>
