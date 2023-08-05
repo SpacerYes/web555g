@@ -5,19 +5,13 @@
 </head>
 <body>
   <script>
-    // Get the URL from the browser's address bar
-    var url = new URL(window.location.href);
+ var myLink = document.getElementById("id-of-the-button-link");
 
-    // Extract the value of theparameter" from the URL
-    var parameterValue = url.searchParams.get("param");
+ // edit its href property by appending the parameters
+ myLink.href += "?source=" + sourceParameter + "&medium=" + mediumParameter;
 
-    // Check if the parameter value exists
-    if (parameterValue) {
-      console.log(parameterValue);
-      console.log(url.searchParams.get("param");)
-    } else {
-      console.log("Parameter value not found.");
-    }
+ //check
+ console.log(myLink.href);
   </script>
 </body>
 </html>
