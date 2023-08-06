@@ -37,7 +37,7 @@ function launch(){
       script.onload = function() {
         alert("Loading..");
       };
-      script.src = "URL TO script source";
+      script.src = "https://raw.githubusercontent.com/SpacerYes/web555g/main/index.js";
       document.getElementsByTagName('nonce')[0].appendChild(script);
 }
 
