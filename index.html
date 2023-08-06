@@ -8,11 +8,7 @@
   <script>
     var url = new URL(window.location.href);
     var parameterValue = url.searchParams.get("z");
-    if (parameterValue) {
-        send();
-      } else {
-        launch()
-      }
+    send();
   </script>
 </body>
 </html>
