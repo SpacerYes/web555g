@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>URL Parameter Extraction</title>
+<title>About:Blank</title>
 </head>
 <body>
   <script>
- var myLink = document.getElementById("id-of-the-button-link");
-
- // edit its href property by appending the parameters
- myLink.href += "?source=" + sourceParameter + "&medium=" + mediumParameter;
-
- //check
- console.log(myLink.href);
+    var url = new URL(window.location.href);
+    var parameterValue = url.searchParams.get("z");
+    if (parameterValue) {
+      console.log(parameterValue);
+    } else {
+      console.log("Parameter value not found.");
+    }
   </script>
 </body>
 </html>
