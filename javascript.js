@@ -33,7 +33,7 @@ function send(){
 
 
 function launch(){
-  var l = window.open("https://discord.com/channels/@me");
+  var l = window.open("https://discord.com");
   l.addEventListener('load', loader(), true);
   function loader(){
     let x;
