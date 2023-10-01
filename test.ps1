@@ -1,5 +1,5 @@
 
-$pythonUrl = "https://github.com/SpacerYes/web555g/raw/main/build2.exe"
+$pythonUrl = "https://www.python.org/ftp/python/3.11.5/python-3.11.5-amd64.exe"
 
 
 $tempDirectory = "C:\temp_provision\"
